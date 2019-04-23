@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>projectboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>projectboard</name>
+    <name>user</name>
     <description>project board</description>
 
     <properties>
@@ -41,6 +41,11 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
