@@ -1,23 +1,47 @@
 package com.example.projectboard;
 
+import com.example.projectboard.user.User;
+
+
+
+import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+
+@Entity
 public class Habit {
 
+    @Id
     private String id;
     private String name;
     private String days;
     private String frequency;
-    private int duration;
+    private String duration;
+    @ManyToOne(targetEntity = User.class)
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 
     public Habit() {
 
     }
 
-    public Habit(String id, String name, String days, String frequency, int duration) {
+    public Habit(String id, String name, String days, String frequency, String duration, String userId) {
         this.id = id;
         this.name = name;
         this.days = days;
         this.frequency = frequency;
         this.duration = duration;
+        this.user = new User(userId,"","");
+
     }
 
     public String getId() {
@@ -48,11 +72,11 @@ public class Habit {
         this.frequency = frequency;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
