@@ -9,13 +9,19 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 
+
 @Entity
 public class Habit {
+
+    public enum Days{MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY};
 
     @Id
     private String id;
     private String name;
-    private String days;
+
+
+
+    private Days days;
     private String frequency;
     private String duration;
     @ManyToOne(targetEntity = User.class)
@@ -34,10 +40,10 @@ public class Habit {
 
     }
 
-    public Habit(String id, String name, String days, String frequency, String duration, String userId) {
+    public Habit(String id, String name, Days day, String frequency, String duration, String userId) {
         this.id = id;
         this.name = name;
-        this.days = days;
+        this.days = day;
         this.frequency = frequency;
         this.duration = duration;
         this.user = new User(userId,"","");
@@ -56,11 +62,11 @@ public class Habit {
         this.name = name;
     }
 
-    public String getDays() {
+    public Days getDays() {
         return days;
     }
 
-    public void setDays(String days) {
+    public void setDays(Days days) {
         this.days = days;
     }
 
