@@ -12,38 +12,7 @@ const days = [
   "Sunday"
 ];
 
-const tab = [
-  {
-    day: 0,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
-  },
-  {
-    day: 1,
-    habits: [{ name: "reading", done: false }]
-  },
-  {
-    day: 2,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
-  },
-  {
-    day: 3,
-    habits: [{ name: "running", done: true }]
-  },
-  {
-    day: 4,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
-  },
-  {
-    day: 5,
-    habits: [{ name: "running", done: true }]
-  },
-  {
-    day: 6,
-    habits: [{ name: "running", done: true }]
-  }
-];
-
-export default () => {
+export default ({ tab }) => {
   const currentDat = new Date();
   const today = currentDat.getDay();
   return (
@@ -67,7 +36,7 @@ export default () => {
               return (
                 <>
                   <Table.Row
-                    css={today === day && `background-color: #e6f5ff;`}
+                    css={today === day && `background-color: #e6faff;`}
                     key={i}
                   >
                     {habits.indexOf(el) === 0 && (
