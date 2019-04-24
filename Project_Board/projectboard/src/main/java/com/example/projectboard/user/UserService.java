@@ -1,7 +1,10 @@
 package com.example.projectboard.user;
 
 
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,6 +23,8 @@ public class UserService {
 //                    new Event("4", "Something else", "Every Monday", "1x per week", 20 )
 //            ));
 
+
+
     public List<User> getAllUsers() {
 
         //return users;
@@ -28,6 +33,8 @@ public class UserService {
                 .forEach(users::add);
         return users;
     }
+
+
 
     public User getUser(String id) {
 
@@ -40,6 +47,8 @@ public class UserService {
         userRepository.save(user);
     }
 
+
+
     public void updateUser(String id, User user) {
         userRepository.save(user);
     }
@@ -47,4 +56,16 @@ public class UserService {
     public void deleteUser(String id) {
         userRepository.deleteById(id);
     }
+
+    @Bean("first")
+    InitializingBean sendDatabase(){
+        return () ->{
+            userRepository.save(new User("1","Jan","Jankowski"));
+            userRepository.save(new User("2","Paweł","Pawłowski"));
+            userRepository.save(new User("3","Mateusz","Nowak"));
+
+
+        };
+    }
+
 }
