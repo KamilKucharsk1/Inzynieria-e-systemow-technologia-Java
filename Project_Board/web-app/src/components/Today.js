@@ -39,7 +39,6 @@ export default ({ habits = [] }) => {
       </Header>
       <List selection verticalAlign="middle">
         {habits.habits.map((e, i) => {
-          console.log(fotos);
           return (
             <List.Item
               key={i}

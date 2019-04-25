@@ -40,15 +40,42 @@ const tab = [
   },
   {
     day: 4,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
+    habits: [
+      {
+        name: "running",
+        done: true,
+        foto:
+          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+      },
+      {
+        name: "reading",
+        done: false,
+        foto:
+          "https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/site/54/images/BhPgYb7ATwCkxpVFmMjF_635892552728342323-2053461056_Woman-reading-a-book-014.jpg"
+      }
+    ]
   },
   {
     day: 5,
-    habits: [{ name: "running", done: true }]
+    habits: [
+      {
+        name: "running",
+        done: false,
+        foto:
+          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+      }
+    ]
   },
   {
     day: 6,
-    habits: [{ name: "running", done: true }]
+    habits: [
+      {
+        name: "running",
+        done: false,
+        foto:
+          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+      }
+    ]
   }
 ];
 

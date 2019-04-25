@@ -1,17 +1,23 @@
 package com.example.projectboard;
 
 
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 @Service
 public class HabitService {
 
     @Autowired
+
     private HabitRepository habitRepository;
 
 
@@ -41,5 +47,15 @@ public class HabitService {
 
     public void deleteHabit(String id) {
         habitRepository.deleteById(id);
+    }
+
+    @Bean
+    @DependsOn({"first"})
+    InitializingBean sendDatabaseHabits(){
+        return () ->{
+            habitRepository.save(new Habit("1","Running", Habit.Days.MONDAY,"every","30","1"));
+            habitRepository.save(new Habit("2","Running faster", Habit.Days.WEDNESDAY,"every","30","1"));
+            habitRepository.save(new Habit("1","Swimming", Habit.Days.FRIDAY,"every","42","2"));
+        };
     }
 }
