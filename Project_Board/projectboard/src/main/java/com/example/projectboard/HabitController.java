@@ -13,12 +13,12 @@ public class HabitController {
     @Autowired
     private HabitService habitService;
 
-    @RequestMapping("habits/{id}")
+    @RequestMapping("users/{id}/habits")
     public List<Habit> getAllHabits(@PathVariable String id){
         return habitService.getAllHabits(id);
     }
 
-    @RequestMapping("habits/{id}")
+    @RequestMapping("users/{userId}/habits/{id}")
     public Habit getHabit(@PathVariable String id){
         return habitService.getHabit(id);
     }
