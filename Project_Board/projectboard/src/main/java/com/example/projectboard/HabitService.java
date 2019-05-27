@@ -52,7 +52,7 @@ public class HabitService {
     @Bean
     @DependsOn({"first"})
     InitializingBean sendDatabaseHabits(){
-        return () ->{
+        return () -> {
             habitRepository.save(new Habit("1","Running", Habit.Days.MONDAY,"every","30","1"));
             habitRepository.save(new Habit("2","Running faster", Habit.Days.WEDNESDAY,"every","30","1"));
             habitRepository.save(new Habit("1","Swimming", Habit.Days.FRIDAY,"every","42","2"));

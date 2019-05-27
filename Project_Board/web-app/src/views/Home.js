@@ -5,15 +5,48 @@ import { Calendar, Today, Progress } from "../components";
 const tab = [
   {
     day: 0,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
+    habits: [
+      {
+        name: "running",
+        done: true,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        name: "reading",
+        done: false,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
   },
   {
     day: 1,
-    habits: [{ name: "reading", done: false }]
+    habits: [
+      {
+        name: "reading",
+        done: false,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
   },
   {
     day: 2,
-    habits: [{ name: "running", done: true }, { name: "reading", done: false }]
+    habits: [
+      {
+        name: "running",
+        done: true,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        name: "reading",
+        done: false,
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
   },
   {
     day: 3,
@@ -21,20 +54,20 @@ const tab = [
       {
         name: "running",
         done: true,
-        foto:
-          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       {
         name: "reading",
         done: false,
-        foto:
-          "https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/site/54/images/BhPgYb7ATwCkxpVFmMjF_635892552728342323-2053461056_Woman-reading-a-book-014.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       {
         name: "biking",
         done: false,
-        foto:
-          "https://www.travelwyoming.com/sites/default/files/uploads/consumer/7-25AM_MtnBiking_0184.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     ]
   },
@@ -44,14 +77,14 @@ const tab = [
       {
         name: "running",
         done: true,
-        foto:
-          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       {
         name: "reading",
         done: false,
-        foto:
-          "https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/site/54/images/BhPgYb7ATwCkxpVFmMjF_635892552728342323-2053461056_Woman-reading-a-book-014.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     ]
   },
@@ -61,8 +94,8 @@ const tab = [
       {
         name: "running",
         done: false,
-        foto:
-          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     ]
   },
@@ -72,8 +105,8 @@ const tab = [
       {
         name: "running",
         done: false,
-        foto:
-          "https://media.mnn.com/assets/images/2017/09/man-running.jpg.653x0_q80_crop-smart.jpg"
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     ]
   }
@@ -85,7 +118,9 @@ export default () => {
     <div
       css={`
         display: grid;
-        grid-template: "calendar today" "progress progress";
+        grid-template:
+          "calendar today"
+          "calendar progress";
         grid-gap: 30px;
         margin: 20px;
         margin-top: 100px;

@@ -47,33 +47,56 @@ export default ({ habits = [] }) => {
                 border: solid 1px hsl(0, 0%, 90%);
               `}
             >
-              <Image src={e.foto} size="small" />
-              {/* <Icon name="book" size="large" /> */}
+              <Image
+                src={"photos/event.png"}
+                css={`
+                  width: 35px;
+                `}
+              />
               <List.Content>
                 <List.Header
                   css={`
                     font-size: 16px;
                   `}
                 >
-                  {e.name}
+                  <div>{e.name}</div>
+                  <div
+                    css={`
+                      width: 50%;
+                      padding-top: 5px;
+                      font-weight: 100;
+                      font-size: 12px;
+                      color: hsl(0, 0%, 40%);
+                    `}
+                  >
+                    {e.description}
+                  </div>
                 </List.Header>
+                <div
+                  css={`
+                    position: absolute;
+                    right: 0;
+                    margin-top: -50px;
+                  `}
+                >
+                  <Button
+                    content="Done"
+                    color="green"
+                    css={`
+                      position: absolute;
+                      right: 115px;
+                    `}
+                  />
+                  <Button
+                    content="Leave"
+                    color="red"
+                    css={`
+                      position: absolute;
+                      right: 25px;
+                    `}
+                  />
+                </div>
               </List.Content>
-              <Button
-                content="Done"
-                color="green"
-                css={`
-                  position: absolute;
-                  right: 115px;
-                `}
-              />
-              <Button
-                content="Leave"
-                color="red"
-                css={`
-                  position: absolute;
-                  right: 25px;
-                `}
-              />
             </List.Item>
           );
         })}

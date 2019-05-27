@@ -10,8 +10,14 @@ import {
 } from "semantic-ui-react";
 import "styled-components/macro";
 
+import useLoginForm from "../customHooks/useLoginForm";
+
 export default withRouter(props => {
   const [view, setView] = useState("login");
+  const [updateValue, submitHandler, errors] = useLoginForm({
+    login: null,
+    password: null
+  });
 
   const onLoginSubmit = () => {
     props.history.push("/home");
@@ -40,22 +46,50 @@ export default withRouter(props => {
                 >
                   Login to HabitApp!
                 </Header>
-                <Form onSubmit={onLoginSubmit}>
+                <Form onSubmit={e => submitHandler(e, onLoginSubmit)}>
                   <Form.Input
                     required
+                    error={errors.login}
+                    name="login"
                     icon="user"
                     iconPosition="left"
                     placeholder="Username"
+                    onChange={updateValue}
                   />
                   <Form.Input
                     required
+                    error={errors.password}
+                    name="password"
                     icon="lock"
                     iconPosition="left"
                     type="password"
                     placeholder="Password"
+                    onChange={updateValue}
                   />
 
                   <Button content="Login" primary />
+                  <div
+                    css={`
+                      position: absolute;
+                      width: 100%;
+                      margin-top: 5px;
+                      text-align: center;
+                      font-size: 11px;
+                    `}
+                  >
+                    {errors &&
+                      Object.values(errors).map((e, i) => (
+                        <span
+                          key={i}
+                          css={`
+                            color: red;
+                            padding: 5px;
+                          `}
+                        >
+                          {e}
+                        </span>
+                      ))}
+                  </div>
                 </Form>
               </Grid.Column>
 
@@ -99,7 +133,7 @@ export default withRouter(props => {
                 >
                   Create an new account in HabitApp!
                 </Header>
-                <Form>
+                <Form onSubmit={onLoginSubmit}>
                   <Form.Input
                     required
                     icon="male"
