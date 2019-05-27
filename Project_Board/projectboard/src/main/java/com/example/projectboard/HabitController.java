@@ -25,13 +25,18 @@ public class HabitController {
 
     @RequestMapping(method = RequestMethod.POST, value="users/{userId}/habits")
     public void addHabit(@RequestBody Habit habit, @PathVariable String userId) {
-        habit.setUser(new User(userId,"",""));
+
+        habit.setUser(new User(userId,"","",""));
+
+ 
         habitService.addHabit(habit);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value="users/{userId}/habits/{id}")
     public void updateHabit(@RequestBody Habit habit, @PathVariable String userId,@PathVariable String id) {
-        habit.setUser(new User(userId,"",""));
+
+        habit.setUser(new User(userId,"","", ""));
+
         habitService.updateHabit(habit);
     }
 
