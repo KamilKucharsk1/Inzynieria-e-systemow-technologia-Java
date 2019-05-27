@@ -30,9 +30,11 @@ public class Habit {
 
 
 
+
     public Habit() {
 
     }
+
 
     public Habit(String id, String name, Days day, String frequency, String duration, String description, String userId) {
 
@@ -41,8 +43,11 @@ public class Habit {
         this.days = day;
         this.frequency = frequency;
         this.duration = duration;
+
         this.description = description;
         this.user = new User(userId,"","","");
+
+
 
     }
 
@@ -86,6 +91,7 @@ public class Habit {
         this.id = id;
     }
 
+
     public User getUser() {
         return user;
     }
@@ -101,4 +107,5 @@ public class Habit {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

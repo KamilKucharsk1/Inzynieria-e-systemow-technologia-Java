@@ -18,16 +18,17 @@ public class User {
 
 
 
-
     public User() {
 
     }
+
 
     public User(String id, String name, String surname, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.password = password;
+
     }
 
     public String getId() {
@@ -54,6 +55,7 @@ public class User {
         this.id = id;
     }
 
+
     public String getPassword() {
         return password;
     }
@@ -63,4 +65,5 @@ public class User {
     }
 
     private String password;
+
 }
