@@ -54,9 +54,9 @@ public class UserService {
     @Bean("first")
     InitializingBean sendDatabase(){
         return () ->{
-            userRepository.save(new User("1","Jan","Jankowski", "haslo123"));
-            userRepository.save(new User("2","Paweł","Pawłowski", "haslo123"));
-            userRepository.save(new User("3","Mateusz","Nowak", "haslo123"));
+            userRepository.save(new User("","Jan","Jankowski", "haslo123"));
+            userRepository.save(new User("","Paweł","Pawłowski", "haslo123"));
+            userRepository.save(new User("","Mateusz","Nowak", "haslo123"));
 
 
         };

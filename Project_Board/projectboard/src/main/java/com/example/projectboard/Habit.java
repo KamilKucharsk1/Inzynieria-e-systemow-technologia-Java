@@ -7,41 +7,62 @@ import com.example.projectboard.user.User;
 import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 @Entity
 public class Habit {
 
-    public enum Days{MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY};
+    //public  enum Days{MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY};
+    public  enum Priority {HIGH, LOW, MEDIUM};
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private String id;
-    private String name;
-
-    private Days days;
-    private String frequency;
-    private String duration;
-    private String description;
+    public String id;
+    public String name;
+//    @Column
+//    @ElementCollection
+    //public Days[] days;
+    public String frequency;
+    public String duration;
+    public String description;
+    public Priority priority;
     @ManyToOne(targetEntity = User.class)
     private User user;
+    public boolean Monday;
+    public boolean Tuesday;
+    public boolean Wednesday;
+    public boolean Thursday;
+    public boolean Friday;
+    public boolean Saturday;
+    public boolean Sunday;
 
 
-
+//private Days days;
 
     public Habit() {
 
     }
-
-    public Habit(String id, String name, Days day, String frequency, String duration, String description, String userId) {
+    //List<Days> days
+    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, String userId) {
 
         this.id = id;
         this.name = name;
-        this.days = day;
-        this.frequency = frequency;
-        this.duration = duration;
+//        this.days = days;
+//        this.duration = duration;
         this.description = description;
+        this.priority = priority;
+        this.Monday = false;
+        this.Tuesday = false;
+        this.Wednesday = false;
+        this.Thursday = false;
+        this.Friday = false;
+        this.Saturday = false;
+        this.Sunday = false;
+
         this.user = new User(userId,"","","");
 
     }
@@ -56,14 +77,6 @@ public class Habit {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Days getDays() {
-        return days;
-    }
-
-    public void setDays(Days days) {
-        this.days = days;
     }
 
     public String getFrequency() {
@@ -100,5 +113,69 @@ public class Habit {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
+    public boolean isMonday() {
+        return Monday;
+    }
+
+    public void setMonday(boolean monday) {
+        Monday = monday;
+    }
+
+    public boolean isTuesday() {
+        return Tuesday;
+    }
+
+    public void setTuesday(boolean tuesday) {
+        Tuesday = tuesday;
+    }
+
+    public boolean isWednesday() {
+        return Wednesday;
+    }
+
+    public void setWednesday(boolean wednesday) {
+        Wednesday = wednesday;
+    }
+
+    public boolean isThursday() {
+        return Thursday;
+    }
+
+    public void setThursday(boolean thursday) {
+        Thursday = thursday;
+    }
+
+    public boolean isFriday() {
+        return Friday;
+    }
+
+    public void setFriday(boolean friday) {
+        Friday = friday;
+    }
+
+    public boolean isSaturday() {
+        return Saturday;
+    }
+
+    public void setSaturday(boolean saturday) {
+        Saturday = saturday;
+    }
+
+    public boolean isSunday() {
+        return Sunday;
+    }
+
+    public void setSunday(boolean sunday) {
+        Sunday = sunday;
     }
 }
