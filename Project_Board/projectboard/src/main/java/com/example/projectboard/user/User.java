@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class User {
@@ -16,16 +17,31 @@ public class User {
     private String id;
     private String name;
     private String surname;
+    private String username;
     private String password;
 
     public User() {
 
     }
 
-    public User(String id, String name, String surname, String password) {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(username, user.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username);
+    }
+
+    public User(String id, String name, String surname, String username, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
+        this.username = username;
         this.password = password;
     }
 
@@ -59,6 +75,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 }

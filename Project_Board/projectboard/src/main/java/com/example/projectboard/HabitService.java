@@ -53,9 +53,9 @@ public class HabitService {
     @DependsOn({"first"})
     InitializingBean sendDatabaseHabits(){
         return () ->{
-            habitRepository.save(new Habit("","Running","Lorem ipsum bla bla",Habit.Priority.MEDIUM, true,false,true,false,true,false,false,"1"));
-            habitRepository.save(new Habit("","Tennis","Lorem ipsum bla bla",Habit.Priority.LOW, true,false,false,true,false,true,false,"2"));
-            habitRepository.save(new Habit("","Swimming","Lorem ipsum bla bla",Habit.Priority.HIGH, true,true,false,false,false,false,true,"1"));        };
+            habitRepository.save(new Habit("","Running","Lorem ipsum bla bla",Habit.Priority.MEDIUM, "1"));
+            habitRepository.save(new Habit("","Tennis","Lorem ipsum bla bla",Habit.Priority.LOW,"2"));
+            habitRepository.save(new Habit("","Swimming","Lorem ipsum bla bla",Habit.Priority.HIGH,"1"));        };
     }
 }
 //new List<Habit.Days>(List.of(Habit.Days.MONDAY)

@@ -3,7 +3,6 @@ package com.example.projectboard.user;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +37,18 @@ public class UserService {
         return userRepository.findById(id).get();
     }
 
+//    public User findUser(String username){
+//        List<User> users = new ArrayList<>();
+//
+//    return userRepository.findAll().forEach(
+//                return new User();
+//            }
+
+
+
+
+
+
     public void addUser(User user) {
 
         userRepository.save(user);
@@ -54,10 +65,9 @@ public class UserService {
     @Bean("first")
     InitializingBean sendDatabase(){
         return () ->{
-            userRepository.save(new User("","Jan","Jankowski", "haslo123"));
-            userRepository.save(new User("","Paweł","Pawłowski", "haslo123"));
-            userRepository.save(new User("","Mateusz","Nowak", "haslo123"));
-
+            userRepository.save(new User("","Jan","Jankowski", "user1", "haslo123"));
+            userRepository.save(new User("","Paweł","Pawłowski", "myUserName", "haslo123"));
+            userRepository.save(new User("","Mateusz","Nowak", "MateuszNowak","haslo123"));
 
         };
     }

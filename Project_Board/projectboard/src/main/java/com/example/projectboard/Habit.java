@@ -1,7 +1,7 @@
 package com.example.projectboard;
 
 import com.example.projectboard.user.User;
-
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 import javax.persistence.*;
@@ -11,6 +11,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 
 @Entity
@@ -32,13 +33,16 @@ public class Habit {
     private Priority priority;
     @ManyToOne(targetEntity = User.class)
     private User user;
-    private boolean Monday;
-    private boolean Tuesday;
-    private boolean Wednesday;
-    private boolean Thursday;
-    private boolean Friday;
-    private boolean Saturday;
-    private boolean Sunday;
+
+
+    private Day Monday;
+    private Day Tuesday;
+    private Day Wednesday;
+    private Day Thursday;
+    private Day Friday;
+    private Day Saturday;
+    private Day Sunday;
+
 
 
 //private Days days;
@@ -47,7 +51,7 @@ public class Habit {
 
     }
     //List<Days> days
-    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, String userId) {
+    public Habit(String id, String name, String description, Priority priority, String userId) {
 
         this.id = id;
         this.name = name;
@@ -55,15 +59,15 @@ public class Habit {
 //        this.duration = duration;
         this.description = description;
         this.priority = priority;
-        this.Monday = Monday;
-        this.Tuesday = Tuesday;
-        this.Wednesday = Wednesday;
-        this.Thursday = Thursday;
-        this.Friday = Friday;
-        this.Saturday = Saturday;
-        this.Sunday = Sunday;
+        this.Monday = new Day(false, Day.isDone.LEFT);
+        this.Tuesday = new Day(false, Day.isDone.LEFT);
+        this.Wednesday = new Day(false, Day.isDone.LEFT);
+        this.Thursday = new Day(false, Day.isDone.LEFT);
+        this.Friday = new Day(false, Day.isDone.LEFT);
+        this.Saturday = new Day(false, Day.isDone.LEFT);
+        this.Sunday = new Day(false, Day.isDone.LEFT);
 
-        this.user = new User(userId,"","","");
+        this.user = new User(userId,"","","","");
 
     }
 
@@ -79,21 +83,7 @@ public class Habit {
         this.name = name;
     }
 
-//    public String getFrequency() {
-//        return frequency;
-//    }
-//
-//    public void setFrequency(String frequency) {
-//        this.frequency = frequency;
-//    }
-//
-//    public String getDuration() {
-//        return duration;
-//    }
-//
-//    public void setDuration(String duration) {
-//        this.duration = duration;
-//    }
+
 
     public void setId(String id) {
         this.id = id;
@@ -123,59 +113,61 @@ public class Habit {
         this.priority = priority;
     }
 
-    public boolean isMonday() {
+    public Day getMonday() {
         return Monday;
     }
 
-    public void setMonday(boolean monday) {
+    public void setMonday(Day monday) {
         Monday = monday;
     }
 
-    public boolean isTuesday() {
+    public Day getTuesday() {
         return Tuesday;
     }
 
-    public void setTuesday(boolean tuesday) {
+    public void setTuesday(Day tuesday) {
         Tuesday = tuesday;
     }
 
-    public boolean isWednesday() {
+    public Day getWednesday() {
         return Wednesday;
     }
 
-    public void setWednesday(boolean wednesday) {
+    public void setWednesday(Day wednesday) {
         Wednesday = wednesday;
     }
 
-    public boolean isThursday() {
+    public Day getThursday() {
         return Thursday;
     }
 
-    public void setThursday(boolean thursday) {
+    public void setThursday(Day thursday) {
         Thursday = thursday;
     }
 
-    public boolean isFriday() {
+    public Day getFriday() {
         return Friday;
     }
 
-    public void setFriday(boolean friday) {
+    public void setFriday(Day friday) {
         Friday = friday;
     }
 
-    public boolean isSaturday() {
+    public Day getSaturday() {
         return Saturday;
     }
 
-    public void setSaturday(boolean saturday) {
+    public void setSaturday(Day saturday) {
         Saturday = saturday;
     }
 
-    public boolean isSunday() {
+    public Day getSunday() {
         return Sunday;
     }
 
-    public void setSunday(boolean sunday) {
+    public void setSunday(Day sunday) {
         Sunday = sunday;
     }
+
+
 }
