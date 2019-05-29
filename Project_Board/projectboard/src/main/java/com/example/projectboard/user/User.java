@@ -1,3 +1,4 @@
+
 package com.example.projectboard.user;
 
 
@@ -62,3 +63,4 @@ public class User {
     }
 
 }
+

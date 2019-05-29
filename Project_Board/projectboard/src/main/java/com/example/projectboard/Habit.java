@@ -1,3 +1,4 @@
+
 package com.example.projectboard;
 
 import com.example.projectboard.user.User;
@@ -179,3 +180,4 @@ public class Habit {
         Sunday = sunday;
     }
 }
+
