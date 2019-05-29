@@ -22,24 +22,24 @@ public class Habit {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    public String id;
-    public String name;
+    private String id;
+    private String name;
 //    @Column
 //    @ElementCollection
     //public Days[] days;
-    public String frequency;
-    public String duration;
-    public String description;
-    public Priority priority;
+    //private String frequency;
+    //private String duration;
+    private String description;
+    private Priority priority;
     @ManyToOne(targetEntity = User.class)
     private User user;
-    public boolean Monday;
-    public boolean Tuesday;
-    public boolean Wednesday;
-    public boolean Thursday;
-    public boolean Friday;
-    public boolean Saturday;
-    public boolean Sunday;
+    private boolean Monday;
+    private boolean Tuesday;
+    private boolean Wednesday;
+    private boolean Thursday;
+    private boolean Friday;
+    private boolean Saturday;
+    private boolean Sunday;
 
 
 //private Days days;
@@ -56,13 +56,13 @@ public class Habit {
 //        this.duration = duration;
         this.description = description;
         this.priority = priority;
-        this.Monday = false;
-        this.Tuesday = false;
-        this.Wednesday = false;
-        this.Thursday = false;
-        this.Friday = false;
-        this.Saturday = false;
-        this.Sunday = false;
+        this.Monday = Monday;
+        this.Tuesday = Tuesday;
+        this.Wednesday = Wednesday;
+        this.Thursday = Thursday;
+        this.Friday = Friday;
+        this.Saturday = Saturday;
+        this.Sunday = Sunday;
 
         this.user = new User(userId,"","","");
 
@@ -80,21 +80,21 @@ public class Habit {
         this.name = name;
     }
 
-    public String getFrequency() {
-        return frequency;
-    }
-
-    public void setFrequency(String frequency) {
-        this.frequency = frequency;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
+//    public String getFrequency() {
+//        return frequency;
+//    }
+//
+//    public void setFrequency(String frequency) {
+//        this.frequency = frequency;
+//    }
+//
+//    public String getDuration() {
+//        return duration;
+//    }
+//
+//    public void setDuration(String duration) {
+//        this.duration = duration;
+//    }
 
     public void setId(String id) {
         this.id = id;
