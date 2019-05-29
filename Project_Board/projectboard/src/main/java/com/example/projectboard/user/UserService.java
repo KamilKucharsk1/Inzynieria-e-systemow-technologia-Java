@@ -1,3 +1,4 @@
+
 package com.example.projectboard.user;
 
 
@@ -23,7 +24,6 @@ public class UserService {
 //                    new Event("4", "Something else", "Every Monday", "1x per week", 20 )
 //            ));
 
-
     public List<User> getAllUsers() {
 
         //return users;
@@ -32,7 +32,6 @@ public class UserService {
                 .forEach(users::add);
         return users;
     }
-
 
     public User getUser(String id) {
 
@@ -45,7 +44,6 @@ public class UserService {
         userRepository.save(user);
     }
 
-
     public void updateUser(String id, User user) {
         userRepository.save(user);
     }
@@ -57,14 +55,13 @@ public class UserService {
     @Bean("first")
     InitializingBean sendDatabase(){
         return () ->{
-
-            userRepository.save(new User("1","Jan","Jankowski", "haslo123"));
-            userRepository.save(new User("2","Paweł","Pawłowski", "haslo123"));
-            userRepository.save(new User("3","Mateusz","Nowak", "haslo123"));
-
+            userRepository.save(new User("","Jan","Jankowski", "haslo123"));
+            userRepository.save(new User("","Paweł","Pawłowski", "haslo123"));
+            userRepository.save(new User("","Mateusz","Nowak", "haslo123"));
 
 
         };
     }
 
 }
+
