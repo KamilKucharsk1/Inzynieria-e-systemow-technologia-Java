@@ -16,37 +16,38 @@ public class Habit {
     public enum Days{MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY};
 
     @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
-
-
 
     private Days days;
     private String frequency;
     private String duration;
+    private String description;
     @ManyToOne(targetEntity = User.class)
     private User user;
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+
 
 
     public Habit() {
 
     }
 
-    public Habit(String id, String name, Days day, String frequency, String duration, String userId) {
+
+    public Habit(String id, String name, Days day, String frequency, String duration, String description, String userId) {
+
         this.id = id;
         this.name = name;
         this.days = day;
         this.frequency = frequency;
         this.duration = duration;
-        this.user = new User(userId,"","");
+
+        this.description = description;
+        this.user = new User(userId,"","","");
+
+
 
     }
 
@@ -89,4 +90,22 @@ public class Habit {
     public void setId(String id) {
         this.id = id;
     }
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }

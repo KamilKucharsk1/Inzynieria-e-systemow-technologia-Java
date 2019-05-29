@@ -24,7 +24,6 @@ public class UserService {
 //            ));
 
 
-
     public List<User> getAllUsers() {
 
         //return users;
@@ -33,7 +32,6 @@ public class UserService {
                 .forEach(users::add);
         return users;
     }
-
 
 
     public User getUser(String id) {
@@ -48,7 +46,6 @@ public class UserService {
     }
 
 
-
     public void updateUser(String id, User user) {
         userRepository.save(user);
     }
@@ -60,9 +57,11 @@ public class UserService {
     @Bean("first")
     InitializingBean sendDatabase(){
         return () ->{
-            userRepository.save(new User("1","Jan","Jankowski"));
-            userRepository.save(new User("2","Paweł","Pawłowski"));
-            userRepository.save(new User("3","Mateusz","Nowak"));
+
+            userRepository.save(new User("1","Jan","Jankowski", "haslo123"));
+            userRepository.save(new User("2","Paweł","Pawłowski", "haslo123"));
+            userRepository.save(new User("3","Mateusz","Nowak", "haslo123"));
+
 
 
         };
