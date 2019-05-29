@@ -45,12 +45,15 @@ export default ({ habits = [] }) => {
               css={`
                 min-height: 50px;
                 border: solid 1px hsl(0, 0%, 90%);
+                margin-bottom: 15px !important;
               `}
             >
               <Image
                 src={"photos/event.png"}
                 css={`
                   width: 35px;
+                  margin-left: 20px !important;
+                  margin-right: 20px !important;
                 `}
               />
               <List.Content>
@@ -59,11 +62,17 @@ export default ({ habits = [] }) => {
                     font-size: 16px;
                   `}
                 >
-                  <div>{e.name}</div>
+                  <div
+                    css={`
+                      padding: 5px !important;
+                    `}
+                  >
+                    {e.name}
+                  </div>
                   <div
                     css={`
                       width: 50%;
-                      padding-top: 5px;
+                      padding: 5px !important;
                       font-weight: 100;
                       font-size: 12px;
                       color: hsl(0, 0%, 40%);

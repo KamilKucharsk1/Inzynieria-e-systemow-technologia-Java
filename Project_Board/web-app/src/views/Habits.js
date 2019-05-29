@@ -144,7 +144,9 @@ export default ({}) => {
           />
         </Form.Group>
 
-        <Button content="Login" primary />
+        <div>
+          <Button content="Add habit" primary />
+        </div>
         <div
           css={`
             position: absolute;
@@ -171,10 +173,10 @@ export default ({}) => {
 
       <Segment
         css={`
-          width: 50%;
+          width: 60%;
           position: absolute;
           top: 20px;
-          left: 25%;
+          left: 20%;
         `}
       >
         <span
@@ -196,15 +198,20 @@ export default ({}) => {
                     margin: 5px;
                     margin-bottom: 20px;
                     padding: 5px;
-                    border-bottom: 1px solid hsl(0, 0%, 85%);
+                    border-bottom: 1px solid hsl(0, 0%, 80%);
                   `}
                 >
-                  <List.Content>
+                  <List.Content
+                    css={`
+                      position: relative;
+                    `}
+                  >
                     <div
                       css={`
                         font-size: 20px;
                         margin-bottom: 10px;
                         font-weight: 800;
+                        padding: 5px;
                       `}
                     >
                       {e.name}
@@ -228,7 +235,7 @@ export default ({}) => {
                           <span
                             css={`
                               margin-right: 10px;
-                              color: blue;
+                              color: hsl(0, 0%, 60%);
                               font-weight: 600;
                             `}
                           >
@@ -237,16 +244,15 @@ export default ({}) => {
                         );
                       })}
                     </div>
-                    <Button
-                      color="red"
+                    <div
                       css={`
-                        width: 50px;
                         position: absolute;
-                        right: 15px;
+                        right: 0;
+                        bottom: 25px;
                       `}
                     >
-                      X
-                    </Button>
+                      <Button color="red">X</Button>
+                    </div>
                   </List.Content>
                 </List.Item>
               </Fragment>

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import "styled-components/macro";
 import { Calendar, Today, Progress } from "../components";
+import "styled-components/macro";
 
 const tab = [
   {
@@ -126,24 +126,29 @@ export default () => {
         margin-top: 100px;
       `}
     >
-      <Calendar
-        tab={tab}
+      <div
         css={`
           grid-area: calendar;
           width: 100%;
         `}
-      />
-      <Today
-        habits={tab[today.getDay()]}
+      >
+        <Calendar tab={tab} />
+      </div>
+
+      <div
         css={`
           grid-area: today;
         `}
-      />
-      <Progress
+      >
+        <Today habits={tab[today.getDay()]} />
+      </div>
+      <div
         css={`
           grid-area: progress;
         `}
-      />
+      >
+        <Progress />
+      </div>
     </div>
   );
 };
