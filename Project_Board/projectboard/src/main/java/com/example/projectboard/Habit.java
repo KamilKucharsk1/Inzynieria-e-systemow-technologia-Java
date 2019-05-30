@@ -1,6 +1,7 @@
 
 package com.example.projectboard;
 
+import com.example.projectboard.Day.Day;
 import com.example.projectboard.user.User;
 
 
@@ -8,10 +9,6 @@ import com.example.projectboard.user.User;
 import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 @Entity
@@ -33,13 +30,20 @@ public class Habit {
     private Priority priority;
     @ManyToOne(targetEntity = User.class)
     private User user;
-    private boolean Monday;
-    private boolean Tuesday;
-    private boolean Wednesday;
-    private boolean Thursday;
-    private boolean Friday;
-    private boolean Saturday;
-    private boolean Sunday;
+    @ManyToOne
+    private Day Monday;
+    @ManyToOne
+    private Day Tuesday;
+    @ManyToOne
+    private Day Wednesday;
+    @ManyToOne
+    private Day Thursday;
+    @ManyToOne
+    private Day Friday;
+    @ManyToOne
+    private Day Saturday;
+    @ManyToOne
+    private Day Sunday;
 
 
 //private Days days;
@@ -48,7 +52,7 @@ public class Habit {
 
     }
     //List<Days> days
-    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, String userId) {
+    public Habit(String id, String name, String description, Priority priority, String userId) {
 
         this.id = id;
         this.name = name;
@@ -56,13 +60,13 @@ public class Habit {
 //        this.duration = duration;
         this.description = description;
         this.priority = priority;
-        this.Monday = Monday;
-        this.Tuesday = Tuesday;
-        this.Wednesday = Wednesday;
-        this.Thursday = Thursday;
-        this.Friday = Friday;
-        this.Saturday = Saturday;
-        this.Sunday = Sunday;
+        this.Monday = new Day(false, Day.isDone.LEFT);
+        this.Tuesday = new Day(false, Day.isDone.LEFT);
+        this.Wednesday = new Day(false, Day.isDone.LEFT);
+        this.Thursday = new Day(false, Day.isDone.LEFT);
+        this.Friday = new Day(false, Day.isDone.LEFT);
+        this.Saturday = new Day(false, Day.isDone.LEFT);
+        this.Sunday = new Day(false, Day.isDone.LEFT);
 
         this.user = new User(userId,"","","");
 
@@ -124,60 +128,6 @@ public class Habit {
         this.priority = priority;
     }
 
-    public boolean isMonday() {
-        return Monday;
-    }
 
-    public void setMonday(boolean monday) {
-        Monday = monday;
-    }
-
-    public boolean isTuesday() {
-        return Tuesday;
-    }
-
-    public void setTuesday(boolean tuesday) {
-        Tuesday = tuesday;
-    }
-
-    public boolean isWednesday() {
-        return Wednesday;
-    }
-
-    public void setWednesday(boolean wednesday) {
-        Wednesday = wednesday;
-    }
-
-    public boolean isThursday() {
-        return Thursday;
-    }
-
-    public void setThursday(boolean thursday) {
-        Thursday = thursday;
-    }
-
-    public boolean isFriday() {
-        return Friday;
-    }
-
-    public void setFriday(boolean friday) {
-        Friday = friday;
-    }
-
-    public boolean isSaturday() {
-        return Saturday;
-    }
-
-    public void setSaturday(boolean saturday) {
-        Saturday = saturday;
-    }
-
-    public boolean isSunday() {
-        return Sunday;
-    }
-
-    public void setSunday(boolean sunday) {
-        Sunday = sunday;
-    }
 }
 
