@@ -43,8 +43,18 @@ public class HabitService {
     }
 
     public void updateHabit( Habit habit) {
+        //habit.setId(id);
+
         habitRepository.save(habit);
     }
+
+//    public void updateDone(Habit habit){
+//        List<Habit> habits = new ArrayList<>();
+//        habitRepository.findAll().forEach(habit1 -> {
+//
+//        });
+//        habitRepository.save(habit);
+//    }
 
     public void deleteHabit(String id) {
         habitRepository.deleteById(id);

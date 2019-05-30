@@ -23,22 +23,34 @@ public class HabitController {
         return habitService.getHabit(id);
     }
 
+    @RequestMapping("habits/{id}")
+    public List<Habit> getAllUserHabits(@PathVariable String id) { return habitService.getAllHabits(id); }
+
+
     @RequestMapping(method = RequestMethod.POST, value="users/{userId}/habits")
     public void addHabit(@RequestBody Habit habit, @PathVariable String userId) {
 
         habit.setUser(new User(userId,"","",""));
 
- 
+
         habitService.addHabit(habit);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value="users/{userId}/habits/{id}")
     public void updateHabit(@RequestBody Habit habit, @PathVariable String userId,@PathVariable String id) {
 
-        habit.setUser(new User(userId,"","", ""));
+
+        habit.setId(id);
+        habit.setUser(habit.getUser());
+
 
         habitService.updateHabit(habit);
     }
+
+//    @RequestMapping(method = RequestMethod.PUT, value = "users/{userId}/habits/{id}")
+//    public void updateDone(@RequestBody Habit habit, @PathVariable String userId, @PathVariable String id){
+//
+//    }
 
     @RequestMapping(method = RequestMethod.DELETE, value="users/{userId}/habits/{id}")
     public void deleteHabit(@PathVariable String id){
