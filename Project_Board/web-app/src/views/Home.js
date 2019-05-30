@@ -1,6 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Calendar, Today, Progress } from "../components";
 import "styled-components/macro";
+import axios from "axios";
+
+import config from "../utils/config";
 
 const tab = [
   {
@@ -112,8 +115,22 @@ const tab = [
   }
 ];
 
-export default () => {
+export default ({ user_id }) => {
   const today = new Date();
+  const [data, setData] = useState(null);
+
+  const fetchData = id => {
+    const { server_url } = config;
+    axios.get(`${server_url}/user/${id}`).then(resp => {
+      console.log(resp.data);
+      setData(resp.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchData(user_id);
+  }, []);
+
   return (
     <div
       css={`
@@ -123,7 +140,6 @@ export default () => {
           "calendar progress";
         grid-gap: 30px;
         margin: 20px;
-        margin-top: 100px;
       `}
     >
       <div

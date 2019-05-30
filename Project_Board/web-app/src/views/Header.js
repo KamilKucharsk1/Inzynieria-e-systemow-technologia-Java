@@ -10,8 +10,6 @@ export default withRouter(props => {
     <div
       css={`
         width: 100vw;
-        position: fixed;
-        top: 0;
         z-index: 100;
         border-radius: none !important;
       `}
@@ -37,6 +35,7 @@ export default withRouter(props => {
           )}
           {pathname !== "/" && (
             <Menu.Item
+              cy="header-habits"
               name="habits"
               active={pathname === "/habits"}
               onClick={() => props.history.push("/habits")}

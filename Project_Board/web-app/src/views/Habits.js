@@ -4,6 +4,8 @@ import { Calendar, Today, Progress } from "../components";
 import { Button, Form, Radio } from "semantic-ui-react";
 import useHabitsForm from "../customHooks/useHabitsForm";
 import { List, Segment } from "semantic-ui-react";
+import config from "../utils/config";
+import axios from "axios";
 
 const habits = [
   {
@@ -26,7 +28,7 @@ const habits = [
   }
 ];
 
-export default ({}) => {
+export default ({ user_id }) => {
   const [
     updateValue,
     duration,
@@ -34,13 +36,15 @@ export default ({}) => {
     submitHandler,
     errors
   ] = useHabitsForm({
-    login: null,
-    password: null
+    user_id
   });
 
   const value = "1";
 
-  const onLoginSubmit = () => {};
+  const onLoginSubmit = data => {
+    const { server_url } = config;
+    axios.post(`/${server_url}/habits`, data).then(resp => console.log(resp));
+  };
 
   const updateDuration = day => {
     if (!duration.includes(day)) {
@@ -65,13 +69,13 @@ export default ({}) => {
         css={`
           margin-left: 20%;
           margin-right: 20%;
-          margin-top: 120px;
           background-color: hsl(0, 0%, 97%);
           border: solid 1px rgba(34, 36, 38, 0.15);
           padding: 20px;
         `}
       >
         <Form.Input
+          cy="form-name"
           required
           error={!!errors.name}
           name="name"
@@ -81,6 +85,7 @@ export default ({}) => {
           onChange={updateValue}
         />
         <Form.TextArea
+          cy="form-description"
           required
           error={!!errors.description}
           name="description"
@@ -93,14 +98,18 @@ export default ({}) => {
         <Form.Group
           inline={false}
           css={`
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             > div {
               background-color: hsl(0, 0%, 95%);
               padding: 5px;
               border: 1px solid hsl(0, 0%, 90%);
+              margin: 5px !important;
             }
           `}
         >
           <Form.Field
+            cy="form-monday"
             toggle
             control={Radio}
             label="Monday"
@@ -113,6 +122,7 @@ export default ({}) => {
             onChange={() => updateDuration("Tuesday")}
           />
           <Form.Field
+            cy="form-wednesday"
             toggle
             control={Radio}
             label="Wednesday"
@@ -131,6 +141,7 @@ export default ({}) => {
             onChange={() => updateDuration("Friday")}
           />
           <Form.Field
+            cy="form-saturday"
             toggle
             control={Radio}
             label="Saturday"
@@ -145,7 +156,7 @@ export default ({}) => {
         </Form.Group>
 
         <div>
-          <Button content="Add habit" primary />
+          <Button cy="submit" content="Add habit" primary />
         </div>
         <div
           css={`
@@ -251,7 +262,9 @@ export default ({}) => {
                         bottom: 25px;
                       `}
                     >
-                      <Button color="red">X</Button>
+                      <Button color="red" cy={`delete-habit-${i}`}>
+                        X
+                      </Button>
                     </div>
                   </List.Content>
                 </List.Item>

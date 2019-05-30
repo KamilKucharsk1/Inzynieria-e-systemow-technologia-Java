@@ -35,8 +35,7 @@ const useForm = initial => {
     setErrors(validate(values));
 
     if (Object.keys(errors).length === 0) {
-      console.log("Sending...", values);
-      callback();
+      callback(values);
     }
   };
 

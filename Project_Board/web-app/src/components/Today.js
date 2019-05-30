@@ -1,30 +1,24 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { List, Image, Header, Icon, Button } from "semantic-ui-react";
+import { List, Image, Header, Button } from "semantic-ui-react";
 import "styled-components/macro";
 import axios from "axios";
 import config from "../utils/config";
 
 export default ({ habits = [] }) => {
-  const [fotos, setFotos] = useState({});
-  useEffect(() => {
-    // if (habits) {
-    //   habits.habits.map((e, i) => {
-    //     const { name, done } = e;
-    //     getPhoto(e.name).then(resp => {
-    //       const url = resp.data.urls.small;
-    //       console.log("fotos", fotos);
-    //       setFotos({ ...fotos, [i]: url });
-    //     });
-    //     return {
-    //       name,
-    //       done
-    //     };
-    //   });
-    // }
-  }, []);
+  useEffect(() => {}, []);
 
-  const getPhoto = type => {
-    return axios.get(`${config.photoAPI}&query=${type}`);
+  const resolveHabit = id => {
+    const { server_url } = config;
+    axios
+      .put(`${server_url}/habits/${id}/done`)
+      .then(resp => console.log(resp));
+  };
+
+  const rejectHabit = id => {
+    const { server_url } = config;
+    axios
+      .put(`${server_url}/habits/${id}/leave`)
+      .then(resp => console.log(resp));
   };
 
   return (
@@ -95,6 +89,7 @@ export default ({ habits = [] }) => {
                       position: absolute;
                       right: 115px;
                     `}
+                    onClick={() => resolveHabit(e.id)}
                   />
                   <Button
                     content="Leave"
@@ -103,6 +98,7 @@ export default ({ habits = [] }) => {
                       position: absolute;
                       right: 25px;
                     `}
+                    onClick={() => rejectHabit(e.id)}
                   />
                 </div>
               </List.Content>
