@@ -40,6 +40,13 @@ public class Habit {
     private boolean Friday;
     private boolean Saturday;
     private boolean Sunday;
+    public boolean Mon;
+    public boolean Tue;
+    public boolean Wed;
+    public boolean Thu;
+    public boolean Fri;
+    public boolean Sat;
+    public boolean Sun;
 
 
 //private Days days;
@@ -48,7 +55,7 @@ public class Habit {
 
     }
     //List<Days> days
-    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, String userId) {
+    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, boolean Mon, boolean Tue, boolean Wed, boolean Thu, boolean Fri, boolean Sat, boolean Sun, String userId) {
 
         this.id = id;
         this.name = name;
@@ -63,6 +70,13 @@ public class Habit {
         this.Friday = Friday;
         this.Saturday = Saturday;
         this.Sunday = Sunday;
+        this.Mon = Mon;
+        this.Tue = Tue;
+        this.Wed = Wed;
+        this.Thu = Thu;
+        this.Fri = Fri;
+        this.Sat = Sat;
+        this.Sun = Sun;
 
         this.user = new User(userId,"","","");
 
