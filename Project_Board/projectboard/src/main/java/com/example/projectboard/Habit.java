@@ -33,20 +33,20 @@ public class Habit {
     private Priority priority;
     @ManyToOne(targetEntity = User.class)
     private User user;
-    private boolean Monday;
-    private boolean Tuesday;
-    private boolean Wednesday;
-    private boolean Thursday;
-    private boolean Friday;
-    private boolean Saturday;
-    private boolean Sunday;
-    public boolean Mon;
-    public boolean Tue;
-    public boolean Wed;
-    public boolean Thu;
-    public boolean Fri;
-    public boolean Sat;
-    public boolean Sun;
+    public boolean Monday_active;
+    public boolean Tuesday_active;
+    public boolean Wednesday_active;
+    public boolean Thursday_active;
+    public boolean Friday_active;
+    public boolean Saturday_active;
+    public boolean Sunday_active;
+    public boolean Mon_done;
+    public boolean Tue_done;
+    public boolean Wed_done;
+    public boolean Thu_done;
+    public boolean Fri_done;
+    public boolean Sat_done;
+    public boolean Sun_done;
 
 
 //private Days days;
@@ -63,20 +63,20 @@ public class Habit {
 //        this.duration = duration;
         this.description = description;
         this.priority = priority;
-        this.Monday = Monday;
-        this.Tuesday = Tuesday;
-        this.Wednesday = Wednesday;
-        this.Thursday = Thursday;
-        this.Friday = Friday;
-        this.Saturday = Saturday;
-        this.Sunday = Sunday;
-        this.Mon = Mon;
-        this.Tue = Tue;
-        this.Wed = Wed;
-        this.Thu = Thu;
-        this.Fri = Fri;
-        this.Sat = Sat;
-        this.Sun = Sun;
+        this.Monday_active = Monday;
+        this.Tuesday_active = Tuesday;
+        this.Wednesday_active = Wednesday;
+        this.Thursday_active = Thursday;
+        this.Friday_active = Friday;
+        this.Saturday_active = Saturday;
+        this.Sunday_active = Sunday;
+        this.Mon_done = Mon;
+        this.Tue_done = Tue;
+        this.Wed_done = Wed;
+        this.Thu_done = Thu;
+        this.Fri_done = Fri;
+        this.Sat_done = Sat;
+        this.Sun_done = Sun;
 
         this.user = new User(userId,"","","");
 
@@ -138,60 +138,6 @@ public class Habit {
         this.priority = priority;
     }
 
-    public boolean isMonday() {
-        return Monday;
-    }
 
-    public void setMonday(boolean monday) {
-        Monday = monday;
-    }
-
-    public boolean isTuesday() {
-        return Tuesday;
-    }
-
-    public void setTuesday(boolean tuesday) {
-        Tuesday = tuesday;
-    }
-
-    public boolean isWednesday() {
-        return Wednesday;
-    }
-
-    public void setWednesday(boolean wednesday) {
-        Wednesday = wednesday;
-    }
-
-    public boolean isThursday() {
-        return Thursday;
-    }
-
-    public void setThursday(boolean thursday) {
-        Thursday = thursday;
-    }
-
-    public boolean isFriday() {
-        return Friday;
-    }
-
-    public void setFriday(boolean friday) {
-        Friday = friday;
-    }
-
-    public boolean isSaturday() {
-        return Saturday;
-    }
-
-    public void setSaturday(boolean saturday) {
-        Saturday = saturday;
-    }
-
-    public boolean isSunday() {
-        return Sunday;
-    }
-
-    public void setSunday(boolean sunday) {
-        Sunday = sunday;
-    }
 }
 
