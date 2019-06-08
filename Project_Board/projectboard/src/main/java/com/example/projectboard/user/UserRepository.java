@@ -4,9 +4,16 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
 
+@Repository
+public interface UserRepository extends JpaRepository<User, String> {
+
+
+    //List<User> findB
 //    User user1 = new User("1","Jan","Kowalski");
 //        UserRepository.addUser(user1);
 

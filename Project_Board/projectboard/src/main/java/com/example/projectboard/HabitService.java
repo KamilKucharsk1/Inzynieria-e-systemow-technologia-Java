@@ -26,8 +26,7 @@ public class HabitService {
 
         //return habits;
         List<Habit> habits = new ArrayList<>();
-        habitRepository.findByUserId(userId)
-                .forEach(habits::add);
+        habitRepository.findByUserId(userId);
         return habits;
     }
 
@@ -60,14 +59,14 @@ public class HabitService {
         habitRepository.deleteById(id);
     }
 
-    @Bean
-    @DependsOn({"first"})
-    InitializingBean sendDatabaseHabits(){
-        return () ->{
-            habitRepository.save(new Habit("","Running","Lorem ipsum bla bla",Habit.Priority.MEDIUM, true,false,true,false,true,false,false,false,false,false,false,false,false,false,"1"));
-            habitRepository.save(new Habit("","Tennis","Lorem ipsum bla bla",Habit.Priority.LOW, true,false,false,true,false,true,false,false,false,false,false,false,false,false,"2"));
-            habitRepository.save(new Habit("","Swimming","Lorem ipsum bla bla",Habit.Priority.HIGH, true,true,false,false,false,false,true,false,false,false,false,false,false,false,"1"));        };
-    }
+//    @Bean
+//    @DependsOn({"first"})
+//    InitializingBean sendDatabaseHabits(){
+//        return () ->{
+//            habitRepository.save(new Habit("","Running","Lorem ipsum bla bla",Habit.Priority.MEDIUM, true,false,true,false,true,false,false,false,false,false,false,false,false,false,"1"));
+//            habitRepository.save(new Habit("","Tennis","Lorem ipsum bla bla",Habit.Priority.LOW, true,false,false,true,false,true,false,false,false,false,false,false,false,false,"2"));
+//            habitRepository.save(new Habit("","Swimming","Lorem ipsum bla bla",Habit.Priority.HIGH, true,true,false,false,false,false,true,false,false,false,false,false,false,false,"1"));        };
+//    }
 }
 //new List<Habit.Days>(List.of(Habit.Days.MONDAY)
 //new Habit.Days[]{Habit.Days.MONDAY}

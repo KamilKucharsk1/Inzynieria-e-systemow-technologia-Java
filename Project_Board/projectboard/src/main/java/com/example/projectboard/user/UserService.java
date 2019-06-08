@@ -28,15 +28,16 @@ public class UserService {
 
         //return users;
         List<User> users = new ArrayList<>();
-        userRepository.findAll()
-                .forEach(users::add);
-        return users;
+
+        return userRepository.findAll();
+
+
     }
 
-    public User getUser(String id) {
+    public User getUser(String user_id) {
 
         //return habits.stream().filter(t -> t.getId().equals(id)).findFirst().get();
-        return userRepository.findById(id).get();
+        return userRepository.findById(user_id).get();
     }
 
     public void addUser(User user) {
@@ -52,16 +53,16 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    @Bean("first")
-    InitializingBean sendDatabase(){
-        return () ->{
-            userRepository.save(new User("","Jan","Jankowski", "haslo123"));
-            userRepository.save(new User("","Paweł","Pawłowski", "haslo123"));
-            userRepository.save(new User("","Mateusz","Nowak", "haslo123"));
-
-
-        };
+//    @Bean("first")
+//    InitializingBean sendDatabase(){
+//        return () ->{
+//            userRepository.save(new User("","Jan","Jankowski", "haslo123"));
+//            userRepository.save(new User("","Paweł","Pawłowski", "haslo123"));
+//            userRepository.save(new User("","Mateusz","Nowak", "haslo123"));
+//
+//
+//        };
     }
 
-}
+
 
