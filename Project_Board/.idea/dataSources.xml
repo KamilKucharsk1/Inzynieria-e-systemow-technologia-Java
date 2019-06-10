@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="database_java" uuid="59852cd8-a3ec-4ae6-8466-81a43ab6d960">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:$PROJECT_DIR$/projectboard/src/main/resources\database_java</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="data.sql" uuid="75f8a044-c995-43a0-a6d4-dc31fbfca8eb">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:$PROJECT_DIR$/projectboard/src/main/resources\data.sql</jdbc-url>
+    </data-source>
+  </component>
+</project>

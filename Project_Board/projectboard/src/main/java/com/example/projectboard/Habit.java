@@ -8,6 +8,7 @@ import com.example.projectboard.user.User;
 import javax.persistence.*;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Null;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,35 +19,37 @@ import java.util.List;
 public class Habit {
 
     //public  enum Days{MONDAY,TUESDAY,WEDNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY};
-    public  enum Priority {HIGH, LOW, MEDIUM};
+    //public  enum Priority {HIGH, LOW, MEDIUM};
+
+    public String priority;
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private String id;
-    private String name;
+    public Integer id;
+    public String name;
 //    @Column
 //    @ElementCollection
     //public Days[] days;
     //private String frequency;
     //private String duration;
-    private String description;
-    private Priority priority;
+    public String description;
+    //public Priority priority;
     @ManyToOne(targetEntity = User.class)
-    private User user;
-    private boolean Monday_active;
-    private boolean Tuesday_active;
-    private boolean Wednesday_active;
-    private boolean Thursday_active;
-    private boolean Friday_active;
-    private boolean Saturday_active;
-    private boolean Sunday_active;
-    private boolean Mon_done;
-    private boolean Tue_done;
-    private boolean Wed_done;
-    private boolean Thu_done;
-    private boolean Fri_done;
-    private boolean Sat_done;
-    private boolean Sun_done;
+    public User user;
+    public boolean Monday_active;
+    public boolean Tuesday_active;
+    public boolean Wednesday_active;
+    public boolean Thursday_active;
+    public boolean Friday_active;
+    public boolean Saturday_active;
+    public boolean Sunday_active;
+    public boolean Mon_done;
+    public boolean Tue_done;
+    public boolean Wed_done;
+    public boolean Thu_done;
+    public boolean Fri_done;
+    public boolean Sat_done;
+    public boolean Sun_done;
 
 
 //private Days days;
@@ -58,7 +61,7 @@ public class Habit {
 
 
     //List<Days> days
-    public Habit(String id, String name, String description, Priority priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, boolean Mon, boolean Tue, boolean Wed, boolean Thu, boolean Fri, boolean Sat, boolean Sun, String userId) {
+    public Habit(Integer id, String name, String description, String priority, boolean Monday, boolean Tuesday, boolean Wednesday, boolean Thursday, boolean Friday, boolean Saturday, boolean Sunday, boolean Mon, boolean Tue, boolean Wed, boolean Thu, boolean Fri, boolean Sat, boolean Sun, Integer userId) {
 
         this.id = id;
         this.name = name;
@@ -85,7 +88,7 @@ public class Habit {
 
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -113,7 +116,7 @@ public class Habit {
 //        this.duration = duration;
 //    }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -133,13 +136,7 @@ public class Habit {
         this.description = description;
     }
 
-    public Priority getPriority() {
-        return priority;
-    }
 
-    public void setPriority(Priority priority) {
-        this.priority = priority;
-    }
 
     public boolean isMonday_active() {
         return Monday_active;
