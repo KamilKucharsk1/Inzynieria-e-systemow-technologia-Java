@@ -21,7 +21,7 @@ public class HabitService {
 
         //return habits;
         List<Habit> habits = new ArrayList<>();
-        habitRepository.findByUserId(userId);
+        habits = habitRepository.findByUserId(userId);
         return habits;
     }
 

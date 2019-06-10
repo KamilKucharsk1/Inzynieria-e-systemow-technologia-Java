@@ -33,7 +33,7 @@ public class HabitController {
     }
 
     @RequestMapping("habits/{id}")
-    public List<Habit> getAllUserHabits(@PathVariable Integer id) { return habitService.getAllHabits(id); }
+    public List<Habit> getAllUserHabits(@PathVariable Integer id) {return habitService.getAllHabits(id); }
 
 
     @RequestMapping(method = RequestMethod.POST, value="users/{userId}/habits")
