@@ -29,9 +29,9 @@ public class UserController {
 
 
     @RequestMapping(method = RequestMethod.PUT, value="/login")
-    public void checkUser(@RequestBody String login, String password) {
-        userService.checkUserLogin(login, password);
-        System.out.println("eeeeeeeeeeee");
+    public User checkUser(@RequestBody String login, String password) {
+
+        return userService.checkUserLogin(login, password);
     }
 
 

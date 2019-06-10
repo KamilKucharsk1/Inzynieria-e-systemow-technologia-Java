@@ -44,8 +44,8 @@ public class UserService {
 
         userRepository.save(user);
     }
-    public void checkUserLogin(String login, String password){
-        userRepository.checkUser(login, password);
+    public User checkUserLogin(String login, String password){
+       return userRepository.checkUser(login, password);
     }
 
     public void updateUser(Integer id, User user) {
