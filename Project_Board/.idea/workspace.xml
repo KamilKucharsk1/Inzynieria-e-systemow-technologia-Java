@@ -2,22 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5fdced-37d1-4f45-b4ff-3359cea33f23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_1_spec_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_2_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Spring_Security_3_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project_Board.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_Board.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/components/Today.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/components/Today.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/utils/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/projectboard/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,10 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="51">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,22 +67,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Repository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Service.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projectboard/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -81,53 +114,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+            <state relative-caret-position="446">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+            <state relative-caret-position="272">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/ProjectboardApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding>
-                <element signature="e#421#422#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,30 +135,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="147" column="54" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+            <state relative-caret-position="1207">
+              <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2442#2443#0" expanded="true" />
-                <element signature="e#2467#2468#0" expanded="true" />
-                <element signature="e#2498#2499#0" expanded="true" />
-                <element signature="e#2525#2526#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2597#2598#0" expanded="true" />
-                <element signature="e#2977#2978#0" expanded="true" />
-                <element signature="e#3005#3006#0" expanded="true" />
-                <element signature="e#3034#3035#0" expanded="true" />
                 <element signature="e#3061#3062#0" expanded="true" />
-                <element signature="e#3099#3100#0" expanded="true" />
-                <element signature="e#3131#3132#0" expanded="true" />
-                <element signature="e#3169#3170#0" expanded="true" />
-                <element signature="e#3203#3204#0" expanded="true" />
-                <element signature="e#3257#3258#0" expanded="true" />
-                <element signature="e#3303#3304#0" expanded="true" />
-                <element signature="e#3340#3341#0" expanded="true" />
-                <element signature="e#3371#3372#0" expanded="true" />
-                <element signature="e#3421#3422#0" expanded="true" />
-                <element signature="e#3461#3462#0" expanded="true" />
+                <element signature="e#3088#3089#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,17 +149,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-              <folding>
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -191,29 +175,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/resources/application.yml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/59852cd8-a3ec-4ae6-8466-81a43ab6d960/console.sql" />
-        <option value="$PROJECT_DIR$/projectboard/pom.xml" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/ProjectboardApplication.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/resources/data.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/75f8a044-c995-43a0-a6d4-dc31fbfca8eb/console.sql" />
         <option value="$PROJECT_DIR$/projectboard/src/main/resources/data.sql.mv.db" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" />
+        <option value="$PROJECT_DIR$/projectboard/pom.xml" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="20" />
-    <option name="y" value="-15" />
-    <option name="width" value="1939" />
-    <option name="height" value="1099" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1310" />
+    <option name="y" value="338" />
+    <option name="width" value="1551" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -266,33 +252,14 @@
               <item name="projectboard" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project_Board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_Board" type="462c0819:PsiDirectoryNode" />
-              <item name="projectboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectboard" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project_Board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project_Board" type="462c0819:PsiDirectoryNode" />
-              <item name="projectboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,7 +273,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ClientServerDataBase" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -368,12 +336,14 @@
       <workItem from="1559135303544" duration="10063000" />
       <workItem from="1559464887247" duration="7162000" />
       <workItem from="1559591523154" duration="6837000" />
-      <workItem from="1560012943304" duration="1929000" />
+      <workItem from="1560012943304" duration="12964000" />
+      <workItem from="1560081798557" duration="841000" />
+      <workItem from="1560083406898" duration="2011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43410000" />
+    <option name="totallyTimeSpent" value="57297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,10 +355,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="1912" y="104" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17848411" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -398,7 +368,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33569404" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35834268" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -408,7 +378,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32152975" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32138857" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32922733" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -500,53 +470,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/resources/data.sql" />
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/resources/data.sql.mv.db" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/75f8a044-c995-43a0-a6d4-dc31fbfca8eb/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,69 +489,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="147" column="54" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+        <state relative-caret-position="646">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2442#2443#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
-            <element signature="e#2498#2499#0" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2597#2598#0" expanded="true" />
-            <element signature="e#2977#2978#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3034#3035#0" expanded="true" />
-            <element signature="e#3061#3062#0" expanded="true" />
-            <element signature="e#3099#3100#0" expanded="true" />
-            <element signature="e#3131#3132#0" expanded="true" />
-            <element signature="e#3169#3170#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3257#3258#0" expanded="true" />
-            <element signature="e#3303#3304#0" expanded="true" />
-            <element signature="e#3340#3341#0" expanded="true" />
-            <element signature="e#3371#3372#0" expanded="true" />
-            <element signature="e#3421#3422#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="493">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.9.Final/hibernate-core-5.3.9.Final-sources.jar!/org/hibernate/query/spi/QueryParameterBindingValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3088#3089#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="51">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SpringSecurityApi/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

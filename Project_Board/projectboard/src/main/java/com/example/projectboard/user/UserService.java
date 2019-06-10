@@ -34,7 +34,7 @@ public class UserService {
 
     }
 
-    public User getUser(String user_id) {
+    public User getUser(Integer user_id) {
 
         //return habits.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         return userRepository.findById(user_id).get();
@@ -45,11 +45,11 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void updateUser(String id, User user) {
+    public void updateUser(Integer id, User user) {
         userRepository.save(user);
     }
 
-    public void deleteUser(String id) {
+    public void deleteUser(Integer id) {
         userRepository.deleteById(id);
     }
 

@@ -1,4 +1,4 @@
-const config = {
+export const config = {
   server_url: "http://localhost:8181",
   firebaseConfig: {
     apiKey: "AIzaSyB4Y5Py1bJS4ivHA6uQNwbH5p2Iw75t2kw",
@@ -11,4 +11,6 @@ const config = {
   }
 };
 
-export default config;
+export const config_local = {
+  server_url: "http://localhost:8080"
+};

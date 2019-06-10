@@ -2,13 +2,14 @@ import React, { Fragment, useEffect, useState } from "react";
 import { List, Image, Header, Button } from "semantic-ui-react";
 import "styled-components/macro";
 import axios from "axios";
-import config from "../utils/config";
+import { config } from "../utils/config/config";
+import { config_local } from "../utilrs/config/config_local";
 
 export default ({ habits = [] }) => {
   useEffect(() => {}, []);
 
   const resolveHabit = id => {
-    const { server_url } = config;
+    const { server_url } = config.config;
     axios
       .put(`${server_url}/habits/${id}/done`)
       .then(resp => console.log(resp));
