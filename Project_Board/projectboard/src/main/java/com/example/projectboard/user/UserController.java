@@ -28,6 +28,12 @@ public class UserController {
     }
 
 
+    @RequestMapping(method = RequestMethod.PUT, value="/login")
+    public void checkUser(@RequestBody String login, String password) {
+        userService.checkUserLogin(login, password);
+        System.out.println("eeeeeeeeeeee");
+    }
+
 
     @RequestMapping(method = RequestMethod.PUT, value="/users/{id}")
     public void updateUser(@RequestBody User user, @PathVariable Integer id) {
