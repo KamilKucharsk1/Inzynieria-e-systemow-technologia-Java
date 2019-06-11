@@ -13,6 +13,10 @@ const days = [
 ];
 
 export default ({ tab }) => {
+  console.log("tab", tab);
+  if (!tab) {
+    return <div>Loading...</div>;
+  }
   const currentDat = new Date();
   const today = currentDat.getDay();
   return (

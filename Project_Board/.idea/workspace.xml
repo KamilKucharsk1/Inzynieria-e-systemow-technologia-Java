@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c5fdced-37d1-4f45-b4ff-3359cea33f23" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/components/Today.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/components/Today.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/utils/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/views/Habits.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/views/Habits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/views/Home.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/projectboard/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+            <state relative-caret-position="69">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="21" column="11" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -112,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="315">
               <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+            <state relative-caret-position="355">
+              <caret line="53" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -157,6 +153,7 @@
     <findStrings>
       <find>hiber</find>
       <find>secu</find>
+      <find>upd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,7 +169,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/75f8a044-c995-43a0-a6d4-dc31fbfca8eb/console.sql" />
         <option value="$PROJECT_DIR$/projectboard/src/main/resources/data.sql.mv.db" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/User.java" />
-        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserService.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserController.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java" />
@@ -180,6 +176,7 @@
         <option value="$PROJECT_DIR$/projectboard/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/projectboard/pom.xml" />
+        <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java" />
         <option value="$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java" />
       </list>
@@ -352,7 +349,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57845000" />
+    <option name="totallyTimeSpent" value="61655000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +364,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18120806" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18120806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -377,7 +374,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3569405" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3569405" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -512,32 +509,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.9.Final/hibernate-core-5.3.9.Final-sources.jar!/org/hibernate/query/spi/QueryParameterBindingValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3061#3062#0" expanded="true" />
-            <element signature="e#3088#3089#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,10 +582,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/Habit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+        <state relative-caret-position="315">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3088#3089#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,10 +604,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/user/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="11" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="53" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projectboard/src/main/java/com/example/projectboard/HabitService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="69">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

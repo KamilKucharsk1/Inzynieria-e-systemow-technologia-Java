@@ -46,6 +46,14 @@ public class HabitController {
     }
 
 //    @RequestMapping(method = RequestMethod.PUT, value="users/{userId}/habits/{id}")
+//    public void updateHabit(@RequestBody Habit habit, @PathVariable Integer id) {
+//
+//        habitService.updateHabit();
+//
+//        habitService.addHabit(habit);
+//    }
+
+//    @RequestMapping(method = RequestMethod.PUT, value="users/{userId}/habits/{id}")
 //    public void updateHabit(@RequestBody Habit habit, @PathVariable String userId,@PathVariable Integer id) {
 //
 //

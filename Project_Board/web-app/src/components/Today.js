@@ -2,11 +2,12 @@ import React, { Fragment, useEffect, useState } from "react";
 import { List, Image, Header, Button } from "semantic-ui-react";
 import "styled-components/macro";
 import axios from "axios";
-import { config } from "../utils/config/config";
-import { config_local } from "../utilrs/config/config_local";
+import config from "../utils/config";
 
 export default ({ habits = [] }) => {
-  useEffect(() => {}, []);
+  if (!habits) {
+    return <div>Loading...</div>;
+  }
 
   const resolveHabit = id => {
     const { server_url } = config.config;

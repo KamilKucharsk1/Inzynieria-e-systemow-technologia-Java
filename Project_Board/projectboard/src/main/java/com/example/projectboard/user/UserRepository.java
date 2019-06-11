@@ -2,6 +2,7 @@ package com.example.projectboard.user;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,5 +18,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 //    User user1 = new User("1","Jan","Kowalski");
 //        UserRepository.addUser(user1);
 
-
+//    @Query("UPDATE")
+//    Habit checkUser(String name, String password);
 }

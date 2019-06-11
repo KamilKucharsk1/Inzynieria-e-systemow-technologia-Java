@@ -1,5 +1,5 @@
-export const config = {
-  server_url: "http://localhost:8181",
+export default {
+  server_url: "http://192.168.0.12:8080",
   firebaseConfig: {
     apiKey: "AIzaSyB4Y5Py1bJS4ivHA6uQNwbH5p2Iw75t2kw",
     authDomain: "red-airline-203709.firebaseapp.com",
@@ -11,6 +11,6 @@ export const config = {
   }
 };
 
-export const config_local = {
-  server_url: "http://localhost:8080"
-};
+// export const config_local = {
+//   server_url: "http://localhost:8080"
+// };

@@ -37,17 +37,14 @@ public class HabitService {
         habitRepository.save(habit);
     }
 
-    public void updateHabit( Habit habit) {
-        //habit.getId()
-
-
-
-        //entityManager.createQuery;
-
-//        Query query = entityManager.createQuery("UPDATE habit SET Friday_active = 1, id = 1 ");
-
-        //habitRepository.save(new Habit());
-    }
+//    public void updateHabit( Habit habit) {
+//        //habit.getId()
+//
+//
+//        List<Habit> habits = new ArrayList<>();
+//        habits = habitRepository.findByUserId(userId);
+//        return habits;
+//    }
 
 //    public void updateDone(Habit habit){
 //        List<Habit> habits = new ArrayList<>();

@@ -5,7 +5,7 @@ import axios from "axios";
 
 import config from "../utils/config";
 
-const tab = [
+const tab1 = [
   {
     day: 0,
     habits: [
@@ -115,21 +115,71 @@ const tab = [
   }
 ];
 
+const done = [
+  "Mon_done",
+  "Tue_done",
+  "Wed_done",
+  "Thu_done",
+  "Fri_done",
+  "Sat_done",
+  "Sun_done"
+];
+const activ = [
+  "Monday_active",
+  "Tuesday_active",
+  "Wednesday_active",
+  "Thursday_active",
+  "Friday_active",
+  "Saturday_active",
+  "Sunday_active"
+];
+
 export default ({ user_id }) => {
   const today = new Date();
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   const fetchData = id => {
     const { server_url } = config;
-    axios.get(`${server_url}/user/${id}`).then(resp => {
+    axios.get(`${server_url}/users/1/habits`).then(resp => {
+      console.log("users fetching");
       console.log(resp.data);
       setData(resp.data);
     });
   };
 
   useEffect(() => {
-    fetchData(user_id);
+    fetchData(1);
   }, []);
+
+  let tab = [0, 1, 2, 3, 4, 5, 6].map(e => {
+    const habits = [...data].map(habit => {
+      const { name, description } = habit;
+      return {
+        name,
+        description,
+        done: habit[done[e]],
+        active: habit[activ[e]]
+      };
+    });
+
+    return {
+      day: e,
+      habits
+    };
+  });
+
+  if (!tab) {
+    return <div>Loading...</div>;
+  }
+
+  const filterTab = tab.map(e => {
+    return {
+      day: e.day,
+      habits: e.habits.filter(el => el.active)
+    };
+  });
+
+  console.log("filtered", filterTab);
 
   return (
     <div
@@ -148,7 +198,7 @@ export default ({ user_id }) => {
           width: 100%;
         `}
       >
-        <Calendar tab={tab} />
+        <Calendar tab={filterTab} />
       </div>
 
       <div
@@ -156,7 +206,7 @@ export default ({ user_id }) => {
           grid-area: today;
         `}
       >
-        <Today habits={tab[today.getDay()]} />
+        <Today habits={filterTab[today.getDay()]} />
       </div>
       <div
         css={`

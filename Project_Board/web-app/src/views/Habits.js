@@ -1,43 +1,52 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import "styled-components/macro";
 import { Calendar, Today, Progress } from "../components";
 import { Button, Form, Radio } from "semantic-ui-react";
-import useHabitsForm from "../customHooks/useHabitsForm";
+
 import { List, Segment } from "semantic-ui-react";
 import config from "../utils/config";
 import axios from "axios";
 
-const habits = [
-  {
-    name: "running",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    duration: ["Monday", "Sunday"]
-  },
-  {
-    name: "reading",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    duration: ["Monday", "Thursday"]
-  },
-  {
-    name: "biking",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    duration: ["Monday", "Saturday"]
-  }
-];
-
 export default ({ user_id }) => {
-  const [
-    updateValue,
-    duration,
-    setDuration,
-    submitHandler,
-    errors
-  ] = useHabitsForm({
-    user_id
+  const [data, setData] = useState([]);
+  const fetchData = id => {
+    const { server_url } = config;
+    axios.get(`${server_url}/users/1/habits`).then(resp => {
+      console.log("users fetching");
+      console.log(resp.data);
+      setData(resp.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchData(1);
+  }, []);
+  // const [
+  //   updateValue,
+  //   duration,
+  //   setDuration,
+  //   submitHandler,
+  //   errors
+  // ] = useHabitsForm({
+  //   user_id
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+  const habitsToShow = [...data].map(e => {
+    return {
+      name: e.name,
+      description: e.description,
+      duration: [],
+      id: e.id
+    };
   });
+
+  const [duration, setDuration] = useState([]);
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
+  const [prio, setPrio] = useState("");
 
   const value = "1";
 
@@ -55,7 +64,7 @@ export default ({ user_id }) => {
       console.log("remove");
     }
   };
-
+  console.log(duration);
   return (
     <div
       css={`
@@ -65,7 +74,26 @@ export default ({ user_id }) => {
       `}
     >
       <Form
-        onSubmit={e => submitHandler(e, onLoginSubmit)}
+        onSubmit={e => {
+          return axios
+            .post("http://localhost:8080/users/1/habits", {
+              user_id: 1,
+              name,
+              description: desc,
+              id: "",
+              Monday_active: duration.includes("Monday") ? 1 : 0,
+              Tuesday_active: duration.includes("Tuesday") ? 1 : 0,
+              Wednesday_active: duration.includes("Wednesday") ? 1 : 0,
+              Thursday_active: duration.includes("Thursday") ? 1 : 0,
+              Friday_active: duration.includes("Friday") ? 1 : 0,
+              Saturday_active: duration.includes("Saturday") ? 1 : 0,
+              Sunday_active: duration.includes("Sunday") ? 1 : 0
+            })
+            .then(res => {
+              console.log(res);
+            })
+            .catch(error => console.log("error", error));
+        }}
         css={`
           margin-left: 20%;
           margin-right: 20%;
@@ -77,22 +105,20 @@ export default ({ user_id }) => {
         <Form.Input
           cy="form-name"
           required
-          error={!!errors.name}
           name="name"
           icon="paper plane outline"
           iconPosition="left"
           placeholder="Habit name"
-          onChange={updateValue}
+          onChange={e => setName(e.target.value)}
         />
         <Form.TextArea
           cy="form-description"
           required
-          error={!!errors.description}
           name="description"
           icon="edit"
           iconPosition="left"
           placeholder="Short description..."
-          onChange={updateValue}
+          onChange={e => setDesc(e.target.value)}
         />
         <label>Frequency</label>
         <Form.Group
@@ -166,20 +192,7 @@ export default ({ user_id }) => {
             text-align: center;
             font-size: 11px;
           `}
-        >
-          {errors &&
-            Object.values(errors).map((e, i) => (
-              <span
-                key={i}
-                css={`
-                  color: red;
-                  padding: 5px;
-                `}
-              >
-                {e}
-              </span>
-            ))}
-        </div>
+        />
       </Form>
 
       <Segment
@@ -199,7 +212,7 @@ export default ({ user_id }) => {
           Habits List
         </span>
         <List>
-          {habits.map((e, i) => {
+          {habitsToShow.map((e, i) => {
             return (
               <Fragment>
                 <List.Item
@@ -241,7 +254,7 @@ export default ({ user_id }) => {
                         margin-top: 5px;
                       `}
                     >
-                      {e.duration.map((e, i) => {
+                      {e.duration.map((el, i) => {
                         return (
                           <span
                             css={`
@@ -250,7 +263,7 @@ export default ({ user_id }) => {
                               font-weight: 600;
                             `}
                           >
-                            {e}
+                            {el}
                           </span>
                         );
                       })}
@@ -262,7 +275,15 @@ export default ({ user_id }) => {
                         bottom: 25px;
                       `}
                     >
-                      <Button color="red" cy={`delete-habit-${i}`}>
+                      <Button
+                        color="red"
+                        cy={`delete-habit-${i}`}
+                        onClick={() => {
+                          axios.delete(
+                            `${config.server_url}/users/1/habits/${e.id}`
+                          );
+                        }}
+                      >
                         X
                       </Button>
                     </div>
